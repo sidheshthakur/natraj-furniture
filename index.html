@@ -150,7 +150,9 @@
       font-size: 8rem;
       box-shadow: 0 32px 80px rgba(0,0,0,0.08);
       z-index: 2;
+      overflow: hidden;
     }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
     .hero-visual::before {
       content: '';
       position: absolute;
@@ -222,6 +224,7 @@
       overflow: hidden;
       box-shadow: 0 24px 60px rgba(0,0,0,0.08);
     }
+    .about-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; }
     .about-card-badge {
       position: absolute;
       bottom: 24px; left: 24px;
@@ -437,7 +440,7 @@
       <a href="#products" class="btn btn-ghost">Explore Products →</a>
     </div>
   </div>
-  <div class="hero-visual">🛋️</div>
+  <div class="hero-visual"><img src="images/storefront.jpg" alt="Natraj Furniture storefront"></div>
 </div>
 
 <!-- STATS -->
@@ -476,7 +479,7 @@
         </div>
       </div>
       <div class="about-card">
-        🪑
+        <img src="images/storefront.jpg" alt="Natraj Furniture store">
         <div class="about-card-badge">
           <div class="rating">⭐ 5.0</div>
           <div class="rating-label">Google Rated</div>
