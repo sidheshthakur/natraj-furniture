@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Natraj Furniture – Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #1a1a1a;
+      --accent: #c8a96e;
+      --accent2: #e8c990;
+      --bg: #f8f7f5;
+      --white: #ffffff;
+      --gray: #6b7280;
+      --light: #f0ece4;
+      --border: #e5e0d8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(200,169,110,0.2);
+    }
+    .logo-wrap { display: flex; flex-direction: column; }
+    .logo-main { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+    .logo-sub { font-size: 0.7rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-top: 1px; }
+    nav ul { list-style: none; display: flex; gap: 36px; align-items: center; }
+    nav ul a { text-decoration: none; color: var(--gray); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; }
+    nav ul a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; color: var(--primary) !important; }
+
+    /* GALLERY HEADER */
+    .gallery-header {
+      padding: 160px 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .section-desc { color: var(--gray); line-height: 1.75; max-width: 560px; font-size: 0.97rem; }
+
+    /* GALLERY GRID */
+    .gallery-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px 100px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--gray);
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 16px;
+    }
+    .gallery-item .ph-icon { font-size: 2rem; opacity: 0.35; }
+
+    .gallery-note {
+      margin-top: 40px;
+      padding: 24px 28px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      nav ul { display: none; }
+      .gallery-header { padding: 110px 24px 30px; }
+      .gallery-inner { padding: 0 24px 60px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-main">Natraj Furniture</div>
+    <div class="logo-sub">नटराज फर्निचर</div>
+  </div>
+  <ul>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="tel:09323819199" class="nav-cta">📞 Call Now</a></li>
+  </ul>
+</nav>
+
+<!-- GALLERY HEADER -->
+<div class="gallery-header">
+  <a href="index.html#products" class="back-link">← Back to Products</a>
+  <div class="section-label">Gallery</div>
+  <div class="section-title" id="cat-title">Products</div>
+  <p class="section-desc" id="cat-desc">Browse our collection. Photos coming soon.</p>
+</div>
+
+<!-- GALLERY GRID -->
+<div class="gallery-inner">
+  <div class="gallery-grid" id="gallery-grid"></div>
+  <div class="gallery-note">📷 Photos for this category will be added soon. Call us at <a href="tel:09323819199" style="color:var(--primary); font-weight:600; text-decoration:none;">093238 19199</a> to ask about current stock and availability.</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Natraj Furniture</div>
+  <div class="footer-copy">© 2024 Natraj Furniture · Ulhasnagar, Maharashtra</div>
+  <div class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  const categories = {
+    'sofa-sets': { title: 'Sofa Sets', icon: '🛋️', desc: 'Comfortable and elegant sofa sets in a variety of styles, sizes, and fabrics to suit your living space.' },
+    'beds-bedroom': { title: 'Beds & Bedroom', icon: '🛏️', desc: 'Sturdy bed frames, wardrobes, and bedroom sets crafted for durability and style.' },
+    'chairs-seating': { title: 'Chairs & Seating', icon: '🪑', desc: 'Dining chairs, recliners, and accent chairs for every corner of your home.' },
+    'dining-sets': { title: 'Dining Sets', icon: '🍽️', desc: 'Beautiful dining tables and chair sets to make every meal a memorable experience.' },
+    'storage-solutions': { title: 'Storage Solutions', icon: '📦', desc: 'Cabinets, shelves, and storage units designed to maximise space without compromising looks.' },
+    'custom-furniture': { title: 'Custom Furniture', icon: '✏️', desc: 'Have something specific in mind? We build custom pieces tailored to your exact requirements.' },
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const cat = categories[params.get('cat')] || { title: 'Products', icon: '🪑', desc: 'Browse our collection. Photos coming soon.' };
+
+  document.getElementById('cat-title').textContent = cat.title;
+  document.getElementById('cat-desc').textContent = cat.desc;
+  document.title = `Natraj Furniture – ${cat.title}`;
+
+  const grid = document.getElementById('gallery-grid');
+  for (let i = 0; i < 8; i++) {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.innerHTML = `<div class="ph-icon">${cat.icon}</div><div>Photo coming soon</div>`;
+    grid.appendChild(item);
+  }
+</script>
+
+</body>
+</html>

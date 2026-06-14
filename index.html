@@ -150,9 +150,7 @@
       font-size: 8rem;
       box-shadow: 0 32px 80px rgba(0,0,0,0.08);
       z-index: 2;
-      overflow: hidden;
     }
-    .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
     .hero-visual::before {
       content: '';
       position: absolute;
@@ -224,7 +222,6 @@
       overflow: hidden;
       box-shadow: 0 24px 60px rgba(0,0,0,0.08);
     }
-    .about-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; }
     .about-card-badge {
       position: absolute;
       bottom: 24px; left: 24px;
@@ -253,6 +250,10 @@
       transition: all 0.25s;
       position: relative;
       overflow: hidden;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
     }
     .product-card::before {
       content: '';
@@ -440,7 +441,7 @@
       <a href="#products" class="btn btn-ghost">Explore Products →</a>
     </div>
   </div>
-  <div class="hero-visual"><img src="images/storefront.jpg" alt="Natraj Furniture storefront"></div>
+  <div class="hero-visual">🛋️</div>
 </div>
 
 <!-- STATS -->
@@ -479,7 +480,7 @@
         </div>
       </div>
       <div class="about-card">
-        <img src="images/storefront.jpg" alt="Natraj Furniture store">
+        🪑
         <div class="about-card-badge">
           <div class="rating">⭐ 5.0</div>
           <div class="rating-label">Google Rated</div>
@@ -500,36 +501,36 @@
       <a href="tel:09323819199" class="btn btn-dark" style="flex-shrink:0;">Enquire Now →</a>
     </div>
     <div class="products-grid">
-      <div class="product-card">
+      <a href="gallery.html?cat=sofa-sets" class="product-card">
         <div class="product-icon">🛋️</div>
         <h3>Sofa Sets</h3>
         <p>Comfortable and elegant sofa sets in a variety of styles, sizes, and fabrics to suit your living space.</p>
-      </div>
-      <div class="product-card">
+      </a>
+      <a href="gallery.html?cat=beds-bedroom" class="product-card">
         <div class="product-icon">🛏️</div>
         <h3>Beds & Bedroom</h3>
         <p>Sturdy bed frames, wardrobes, and bedroom sets crafted for durability and style.</p>
-      </div>
-      <div class="product-card">
+      </a>
+      <a href="gallery.html?cat=chairs-seating" class="product-card">
         <div class="product-icon">🪑</div>
         <h3>Chairs & Seating</h3>
         <p>Dining chairs, recliners, and accent chairs for every corner of your home.</p>
-      </div>
-      <div class="product-card">
+      </a>
+      <a href="gallery.html?cat=dining-sets" class="product-card">
         <div class="product-icon">🍽️</div>
         <h3>Dining Sets</h3>
         <p>Beautiful dining tables and chair sets to make every meal a memorable experience.</p>
-      </div>
-      <div class="product-card">
+      </a>
+      <a href="gallery.html?cat=storage-solutions" class="product-card">
         <div class="product-icon">📦</div>
         <h3>Storage Solutions</h3>
         <p>Cabinets, shelves, and storage units designed to maximise space without compromising looks.</p>
-      </div>
-      <div class="product-card">
+      </a>
+      <a href="gallery.html?cat=custom-furniture" class="product-card">
         <div class="product-icon">✏️</div>
         <h3>Custom Furniture</h3>
         <p>Have something specific in mind? We build custom pieces tailored to your exact requirements.</p>
-      </div>
+      </a>
     </div>
   </div>
 </div>
